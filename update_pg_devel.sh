@@ -20,7 +20,7 @@ mkdir pg14
 cp -av /usr/include/pgsql/server ./pg14
 
 sudo zypper rm postgresql14-devel postgresql14-llvmjit-devel postgresql14-server-devel postgresql-devel postgresql-llvmjit-devel
-  postgresql-server-devel
+#  postgresql-server-devel
 
 mkdir ./pg15
 

@@ -24,7 +24,7 @@ Summary:	pg_jwt - Extension for PostgreSQL implemting jwt and passkeys functions
 Url:		http://projekte.ang.de/pg_jwt
 Group:		%{group}
 Source:		%{name}-%{version}.tar.gz
-BuildRequires:  postgresql-server-devel postgresql-devel
+BuildRequires:  postgresql-server-devel
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 %description
