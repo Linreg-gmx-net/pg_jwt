@@ -34,18 +34,7 @@ pg_jwt -  Extension for PostgreSQL implemting jwt and passkeys functions
 %setup -q
 
 %build
-export VERSION="pg13"
-make
-make clean
-export VERSION="pg14"
-make
-make clean
-export VERSION="pg15"
-make
-make clean
-export VERSION="pg16"
-make
-make clean
+make all
 
 %clean
 rm -Rf %{buildroot}
