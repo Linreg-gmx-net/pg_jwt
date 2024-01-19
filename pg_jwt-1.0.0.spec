@@ -34,16 +34,18 @@ pg_jwt -  Extension for PostgreSQL implemting jwt and passkeys functions
 %setup -q
 
 %build
-export VERSION="pg12"
-make
 export VERSION="pg13"
 make
+make clean
 export VERSION="pg14"
 make
+make clean
 export VERSION="pg15"
 make
+make clean
 export VERSION="pg16"
 make
+make clean
 
 %clean
 rm -Rf %{buildroot}
@@ -54,7 +56,7 @@ make install DESTDIR=%{buildroot} INSTALL_ROOT=%{buildroot}
 %pre
 
 %post
-for i in 12 13 14 15 16;
+for i in 13 14 15 16;
 do
     if [ -e /usr/share/postgresql$i/extension ]; then
         test -e /usr/share/postgresql$i/extension/pg_jwt.control || ln -s /opt/pg_jwt/pg_jwt.control /usr/share/postgresql$i/extension/
@@ -65,7 +67,7 @@ done
 
 %postun
 if [ $1 = 0 ]; then
-for i in 12 13 14 15 16;
+for i in 13 14 15 16;
 do
     if [ -e /usr/share/postgresql$i/extension ]; then
         test -e /usr/share/postgresql$i/extension/pg_jwt.control && rm /usr/share/postgresql$i/extension/pg_jwt.control
@@ -79,7 +81,6 @@ exit 0;
 %files
 %defattr(-,root,root)
 /opt/pg_jwt/pg_jwt.control
-/opt/pg_jwt/pg_jwt-12.so
 /opt/pg_jwt/pg_jwt-13.so
 /opt/pg_jwt/pg_jwt-14.so
 /opt/pg_jwt/pg_jwt-15.so
