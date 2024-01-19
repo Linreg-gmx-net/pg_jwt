@@ -39,11 +39,12 @@ all: jwt_func-13.so jwt_func-14.so jwt_func-15.so jwt_func-16.so
 install: all
 	@test -d $(INSTALL_ROOT)/opt/pg_jwt/ || mkdir -p $(INSTALL_ROOT)/opt/pg_jwt/
 	$(INSTALL_PROG) /mnt/HOME_ENC/home/thomas.steffen/Documents/Programmierung/CPP/pg_server/pg_jwt/pg_jwt.control   $(INSTALL_ROOT)/opt/pg_jwt/pg_jwt.control
-	$(INSTALL_PROG) /mnt/HOME_ENC/home/thomas.steffen/Documents/Programmierung/CPP/pg_server/pg_jwt/pg_jwt-13.so     $(INSTALL_ROOT)/opt/pg_jwt/pg_jwt-13.so
-	$(INSTALL_PROG) /mnt/HOME_ENC/home/thomas.steffen/Documents/Programmierung/CPP/pg_server/pg_jwt/pg_jwt-13.so     $(INSTALL_ROOT)/opt/pg_jwt/pg_jwt-13.so
-	$(INSTALL_PROG) /mnt/HOME_ENC/home/thomas.steffen/Documents/Programmierung/CPP/pg_server/pg_jwt/pg_jwt-15.so     $(INSTALL_ROOT)/opt/pg_jwt/pg_jwt-15.so
-	$(INSTALL_PROG) /mnt/HOME_ENC/home/thomas.steffen/Documents/Programmierung/CPP/pg_server/pg_jwt/pg_jwt-16.so     $(INSTALL_ROOT)/opt/pg_jwt/pg_jwt-16.so
 	$(INSTALL_PROG) /mnt/HOME_ENC/home/thomas.steffen/Documents/Programmierung/CPP/pg_server/pg_jwt/pg_jwt--1.0.sql  $(INSTALL_ROOT)/opt/pg_jwt/pg_jwt--1.0.sql
+	$(INSTALL_PROG) pg_jwt/pg_jwt-13.so     $(INSTALL_ROOT)/opt/pg_jwt/pg_jwt-13.so
+	$(INSTALL_PROG) pg_jwt/pg_jwt-13.so     $(INSTALL_ROOT)/opt/pg_jwt/pg_jwt-13.so
+	$(INSTALL_PROG) pg_jwt/pg_jwt-15.so     $(INSTALL_ROOT)/opt/pg_jwt/pg_jwt-15.so
+	$(INSTALL_PROG) pg_jwt/pg_jwt-16.so     $(INSTALL_ROOT)/opt/pg_jwt/pg_jwt-16.so
+
 
 clean:
 	rm ./*.o ./jwt_func-13.so ./jwt_func-14.so ./jwt_func-15.so ./jwt_func-16.so
