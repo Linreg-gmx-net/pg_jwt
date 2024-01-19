@@ -38,12 +38,12 @@ all: jwt_func-13.so jwt_func-14.so jwt_func-15.so jwt_func-16.so
 
 install: all
 	@test -d $(INSTALL_ROOT)/opt/pg_jwt/ || mkdir -p $(INSTALL_ROOT)/opt/pg_jwt/
-	$(INSTALL_PROG) $(INSTALL_ROOT)/pg_jwt/pg_jwt.control     $(INSTALL_ROOT)/opt/pg_jwt/pg_jwt.control
-	$(INSTALL_PROG) $(INSTALL_ROOT)/pg_jwt/pg_jwt--1.0.0.sql  $(INSTALL_ROOT)/opt/pg_jwt/pg_jwt--1.0.0.sql
-	$(INSTALL_PROG) $(INSTALL_ROOT)/pg_jwt/pg_jwt-13.so       $(INSTALL_ROOT)/opt/pg_jwt/pg_jwt-13.so
-	$(INSTALL_PROG) $(INSTALL_ROOT)/pg_jwt/pg_jwt-13.so       $(INSTALL_ROOT)/opt/pg_jwt/pg_jwt-13.so
-	$(INSTALL_PROG) $(INSTALL_ROOT)/pg_jwt/pg_jwt-15.so       $(INSTALL_ROOT)/opt/pg_jwt/pg_jwt-15.so
-	$(INSTALL_PROG) $(INSTALL_ROOT)/pg_jwt/pg_jwt-16.so       $(INSTALL_ROOT)/opt/pg_jwt/pg_jwt-16.so
+	$(INSTALL_PROG) $(BUILD_ROOT)/pg_jwt/pg_jwt.control     $(INSTALL_ROOT)/opt/pg_jwt/pg_jwt.control
+	$(INSTALL_PROG) $(BUILD_ROOT)/pg_jwt/pg_jwt--1.0.0.sql  $(INSTALL_ROOT)/opt/pg_jwt/pg_jwt--1.0.0.sql
+	$(INSTALL_PROG) $(BUILD_ROOT)/pg_jwt/pg_jwt-13.so       $(INSTALL_ROOT)/opt/pg_jwt/pg_jwt-13.so
+	$(INSTALL_PROG) $(BUILD_ROOT)/pg_jwt/pg_jwt-13.so       $(INSTALL_ROOT)/opt/pg_jwt/pg_jwt-13.so
+	$(INSTALL_PROG) $(BUILD_ROOT)/pg_jwt/pg_jwt-15.so       $(INSTALL_ROOT)/opt/pg_jwt/pg_jwt-15.so
+	$(INSTALL_PROG) $(BUILD_ROOT)/pg_jwt/pg_jwt-16.so       $(INSTALL_ROOT)/opt/pg_jwt/pg_jwt-16.so
 
 
 clean:
