@@ -1,0 +1,4 @@
+# pg_jwt extension
+comment = 'Extension for PostgreSQL implemting jwt and passkeys functions'
+default_version = '1.0.0'
+relocatable = true
